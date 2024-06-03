@@ -1,0 +1,18 @@
+Def avaliar_expressao(expressao):
+
+ Pilha = []
+ For token in expressao.split():
+
+ If token.isdigit():
+
+ Pilha.append(int(token))
+ Elif token in “+-*/”:
+ Operando2 = pilha.pop()
+ Operando1 = pilha.pop()
+ Resultado = eval(f”{operando1} {token} {operando2}”)
+ Pilha.append(resultado)
+ Elif token == “(“:
+ Pilha.append(“(“) 
+ Elif token == “)”:
+ While pilha[-1] != “(“:
+ Operando2 = pilha.
